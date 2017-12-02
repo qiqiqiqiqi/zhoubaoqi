@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/navigation_green_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/common_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/leftView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="leftTitleClick"
+            android:paddingLeft="@dimen/margin_x2"
+            android:paddingRight="@dimen/margin_x2"
+            >
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/navigation_back_selector"
+                />
+
+            <TextView
+                android:id="@+id/cancle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="leftTitleClick"
+                android:text="@string/cancel"
+                android:textColor="@color/common_white"
+                android:textSize="@dimen/text_small"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/rightView"
+            android:layout_toRightOf="@+id/leftView"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="标题"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/navigation_textsize"
+            android:visibility="visible"/>
+
+
+        <RelativeLayout
+
+            android:id="@+id/rightView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/margin_x2"
+            android:paddingRight="@dimen/margin_x2"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_right_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/confirm_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="rightTitleClick"
+                    android:singleLine="true"
+                    android:text="标题"
+                    android:textColor="@color/common_white"
+                    android:textSize="@dimen/text_normal"
+                    android:visibility="invisible"
+                    />
+
+                <ImageView
+                    android:id="@+id/confirm_image_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:contentDescription="@null"
+                    android:onClick="rightTitleClick"
+
+                    />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_left_to_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/rl_right_layout"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:onClick="leftToRightImgOnClick"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_alignBottom="@+id/navigation_green_ll"
+        android:background="@color/font_white_gray"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_background"
+              android:orientation="vertical"
+              tools:context="com.qi.wechatclient.fragment.MineFragment">
+
+    <com.qi.wechatclient.view.NavigationBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        app:middle_text_color="@android:color/black"
+        app:title="@string/main_my">
+    </com.qi.wechatclient.view.NavigationBar>
+
+    <RelativeLayout
+        android:id="@+id/personal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:background="@color/common_white"
+        android:paddingBottom="@dimen/padding_x2"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingRight="@dimen/padding_x4"
+        android:paddingTop="@dimen/padding_x2">
+
+        <ImageView
+            android:id="@+id/personal_head"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/head_normal"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_toRightOf="@id/personal_head"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x2"
+                android:text="昵称"
+                android:textColor="@color/common_text_drak"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/personal_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x4"
+        android:background="@color/common_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_x4">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/personal_set"
+            android:drawablePadding="@dimen/padding_x4"
+            android:gravity="center_vertical"
+            android:text="@string/personal_settings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal"/>
+    </LinearLayout>
+</LinearLayout>

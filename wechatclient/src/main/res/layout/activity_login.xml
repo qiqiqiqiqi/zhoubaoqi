@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.qi.wechatclient.common.LoginActivity">
+
+    <ImageView
+
+        android:id="@+id/bg_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        android:src="@drawable/login_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_x6"
+            android:src="@drawable/login_logo"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_x8"
+            android:paddingLeft="@dimen/margin_x4"
+            android:paddingRight="@dimen/margin_x4">
+
+            <com.qi.wechatclient.view.EditTextWithCompound
+                android:id="@+id/login_account"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_bottom_line"
+                android:drawableLeft="@drawable/login_user_icon"
+                android:drawablePadding="@dimen/padding_x4"
+                android:drawableRight="@drawable/login_delete"
+                android:hint="@string/login_account_hint_tips"
+                android:inputType="number"
+                android:paddingLeft="@dimen/padding_x4"
+                android:paddingRight="@dimen/margin_x12"
+                android:textColor="@color/common_white"
+                android:textColorHint="@color/common_text_hint"
+                android:textCursorDrawable="@drawable/edit_text_cursor_shape"
+                android:textSize="@dimen/text_normal"/>
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_x4"
+                android:src="@drawable/nav_down_white"/>
+        </RelativeLayout>
+
+        <com.qi.wechatclient.view.EditTextWithCompound
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:background="@drawable/bg_bottom_line"
+            android:drawableLeft="@drawable/login_password_icon"
+            android:drawablePadding="@dimen/padding_x4"
+            android:drawableRight="@drawable/login_delete"
+            android:hint="@string/login_password_hint_tips"
+            android:inputType="phone"
+            android:paddingLeft="@dimen/padding_x4"
+            android:paddingRight="@dimen/margin_x12"
+            android:textColor="@color/common_white"
+            android:textColorHint="@color/common_text_hint"
+            android:textCursorDrawable="@drawable/edit_text_cursor_shape"
+            android:textSize="@dimen/text_normal"/>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:layout_marginRight="@dimen/margin_x4"
+            android:layout_marginTop="@dimen/margin_x8"
+            android:background="@drawable/login_button_selector"
+            android:text="@string/login"
+            android:textColor="@color/common_white"
+            android:textSize="@dimen/text_large"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

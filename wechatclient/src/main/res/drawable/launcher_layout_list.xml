@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="fill">
+        <bitmap android:src="@drawable/launch_activity_bg"/>
+    </item>
+    <item
+        android:gravity="center|center_horizontal">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/launch_text_cn"/>
+    </item>
+</layer-list>

@@ -1,0 +1,13 @@
+package protocol;
+import "ChatData.proto";
+import "Result.proto";
+message SendChatReq {
+    required ChatItem chatData = 1;
+
+}
+message SendChatRsp {
+
+    required ResultCode resultCode = 1;
+    required string messageInfoID=2;
+
+}

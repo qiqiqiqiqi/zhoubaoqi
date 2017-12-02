@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black">#000000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="common_white">#ffffffff</color>
+    <color name="common_background">#EBEBEB</color>
+    <color name="common_normal_green">#31c37c</color>
+    <color name="common_press_green">#3ac569</color>
+    <color name="error_red">#ff5040</color>
+    <color name="common_text_hint">#D1D1D1</color>
+    <color name="common_text_drak">#787978</color>
+    <color name="common_dialog_bg">#80000000</color>
+
+    <!-- 灰白 -->
+    <color name="font_white_gray">#cccccc</color>
+
+    <!-- 其它背景色或分割线相关 -->
+    <color name="bg_content">#f3f3f3</color>
+    <color name="divider_line">#d9d9d9</color>
+
+    <!-- 字体色 -->
+    <color name="text_title">#1b1b1b</color>
+    <color name="text_content">#818181</color>
+    <color name="text_sub">#919191</color>
+    <color name="text_hint">#c7c7c7</color>
+    <color name="text_black">#404040</color>
+</resources>

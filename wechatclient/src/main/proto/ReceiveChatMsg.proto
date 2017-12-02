@@ -1,0 +1,6 @@
+package protocol;
+import "ChatData.proto";
+
+message ReceiveChatSync{
+	repeated ChatItem chatData = 1;
+}

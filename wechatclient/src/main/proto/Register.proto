@@ -1,0 +1,13 @@
+package protocol;
+import "Result.proto";
+import "UserData.proto";
+message RegisterReq {
+
+    required string userName = 1;
+    required string userPassword = 2;
+}
+
+message RegisterRsp {
+    optional UserItem userItem = 2;
+    required ResultCode resultCode = 1;
+}

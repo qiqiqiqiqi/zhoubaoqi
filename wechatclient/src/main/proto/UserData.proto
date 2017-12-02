@@ -1,0 +1,11 @@
+
+package protocol;
+
+message UserItem {
+    required string userId = 1;
+    required string userName = 2;
+    optional int32 headIndex = 3;
+    optional int64 creatTime = 4;
+}
+
+

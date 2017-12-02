@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/messageContainer"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/common_white"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_x2"
+        android:paddingLeft="@dimen/padding_x4"
+        android:paddingTop="@dimen/padding_x2">
+
+        <ImageView
+            android:id="@+id/friend_head"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_house_smal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_x4"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/friend_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="好友名称"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal"/>
+
+
+            <TextView
+
+                android:id="@+id/friend_current_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="message"
+                android:textColor="@color/common_text_drak"
+                android:textSize="@dimen/text_small"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/common_text_hint"/>
+</LinearLayout>
+

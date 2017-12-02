@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingLeft="2dp"
+              android:paddingRight="2dp">
+
+    <com.qi.customview.view.ChartViewItemRect
+        android:id="@+id/item_chartview"
+        android:layout_width="60dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/item_text"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

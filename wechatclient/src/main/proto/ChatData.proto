@@ -1,0 +1,21 @@
+package protocol;
+
+message ChatItem {
+    enum ChatType {
+        TEXT = 0;
+        IMAGE = 1;
+    }
+    enum TargetType {
+        INDIVIDUAL = 0;
+        GROUP = 1;
+        SYSTEM = 2;
+    }
+
+    optional TargetType targetType = 1 [default = INDIVIDUAL];
+    optional string sendUserId = 2;
+    required string receiveUserId = 3;
+    required ChatType chatType = 4;
+    required string chatBody = 5;
+    required string messageInfoID = 7;
+    optional int64 date = 6;
+}

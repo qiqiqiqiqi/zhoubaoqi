@@ -1,0 +1,11 @@
+package protocol;
+import "Result.proto";
+import "UserData.proto";
+message LoginReq {
+    required string userName = 1;
+    required string userPassword = 2;
+}
+message LoginRsp {
+    required ResultCode resultCode = 1;
+    required UserItem userItem = 2;
+}

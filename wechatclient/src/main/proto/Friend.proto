@@ -1,0 +1,11 @@
+package protocol;
+
+message FriendItem {
+    required string userId = 1;
+    required string friendId = 2;
+    optional string friendName = 3;
+    optional string headPath = 4;
+    optional int64 creatTime = 5;
+}
+
+

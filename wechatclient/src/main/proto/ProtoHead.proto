@@ -1,0 +1,35 @@
+package protocol;
+enum ENetworkMessage {
+    KEEP_ALIVE_SYNC = 0; //心跳包
+    REGISTER_REQ = 1; //注册请求
+    REGISTER_RSP = 2;
+    LOGIN_REQ = 3; //登录请求
+    LOGIN_RSP = 4;
+    PERSONALSETTINGS_REQ = 5; //个人信息设置请求
+    PERSONALSETTINGS_RSP = 6;
+    GET_USERINFO_REQ = 7; //个人信息请求
+    GET_USERINFO_RSP = 8;
+    ADD_FRIEND_REQ = 9; //添加好友
+    ADD_FRIEND_RSP = 10;
+    DELETE_FRIEND_REQ = 11; //删除好友
+    DELETE_FRIEND_RSP = 12;
+    OFFLINE_SYNC = 13; //离线
+    LOGOUT_REQ = 14; //退出登录
+    LOGOUT_RSP = 15;
+    GET_PERSONALINFO_REQ = 16;
+    GET_PERSONALINFO_RSP = 17;
+    CHANGE_FRIEND_SYNC = 18;
+    SEND_CHAT_REQ = 19;
+    SEND_CHAT_RSP = 20;
+    RECEIVE_CHAT_SYNC = 21;
+    CREATE_GROUP_CHAT_REQ = 22;
+    CREATE_GROUP_CHAT_RSP = 23;
+    CHANGE_GROUP_REQ = 24;
+    CHANGE_GROUP_RSP = 25;
+    CHANGE_GROUP_SYNC = 26;
+    GET_GROUP_INFO_REQ = 27;
+    GET_GROUP_INFO_RSP = 28;
+    GET_FRIEND_LIST_REQ = 29;
+    GET_FRIEND_LIST_RSP = 30;
+
+}

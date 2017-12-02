@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/padding_x2"
+              android:paddingTop="@dimen/padding_x2">
+
+    <ProgressBar
+
+        android:id="@+id/progress"
+        style="@android:style/Widget.ProgressBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:indeterminateDrawable="@drawable/progrsss"
+        />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_x2"
+        android:gravity="center"
+        android:padding="@dimen/padding_x2"
+        android:text="@string/loging"
+        android:textColor="@color/font_white_gray"
+        android:textSize="@dimen/text_normal"/>
+</LinearLayout>

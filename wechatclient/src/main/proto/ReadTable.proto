@@ -1,0 +1,12 @@
+package protocol;
+import "Friend.proto";
+import "Result.proto";
+message ReadImportantTableReq {
+    required string userID = 1;
+}
+message ReadImportantTableRsp {
+    required ResultCode resultCode = 1;
+    repeated FriendItem friend = 2;
+}
+
+

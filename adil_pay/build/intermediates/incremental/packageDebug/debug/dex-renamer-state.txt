@@ -1,0 +1,4 @@
+#Fri Dec 01 18:25:00 CST 2017
+base.0=D\:\\app\\zhoubaoqi\\adil_pay\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

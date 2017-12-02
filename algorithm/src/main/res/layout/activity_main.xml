@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="study.qi.com.algorithm.MainActivity">
+
+    <Button
+        android:id="@+id/insertSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="插入排序"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/shellSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="希尔排序"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/insertSort"/>
+    <Button
+        android:id="@+id/heapSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="堆排序"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shellSort"/>
+
+    <Button
+        android:id="@+id/mergeSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="归并排序"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heapSort"/>
+
+    <Button
+        android:id="@+id/quickSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="快速排序"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mergeSort"/>
+
+</android.support.constraint.ConstraintLayout>

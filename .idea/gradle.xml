@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="D:\androidstudio\androidstudio\android-studio-ide-143.2915827-windows\android-studio\gradle\gradle-4.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/adil_client" />
+            <option value="$PROJECT_DIR$/adil_pay" />
+            <option value="$PROJECT_DIR$/adil_remote" />
+            <option value="$PROJECT_DIR$/algorithm" />
+            <option value="$PROJECT_DIR$/amination" />
+            <option value="$PROJECT_DIR$/animationdemo" />
+            <option value="$PROJECT_DIR$/bezierdemo" />
+            <option value="$PROJECT_DIR$/circularseekbar" />
+            <option value="$PROJECT_DIR$/customview" />
+            <option value="$PROJECT_DIR$/tantan" />
+            <option value="$PROJECT_DIR$/wechatclient" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
