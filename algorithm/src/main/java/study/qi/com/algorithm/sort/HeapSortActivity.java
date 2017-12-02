@@ -51,6 +51,7 @@ public class HeapSortActivity extends AppCompatActivity {
     }
 
     private void initView() {
+
         mSourceArray = findViewById(R.id.source_array);
         mSortedArray = findViewById(R.id.sorted_array);
     }
