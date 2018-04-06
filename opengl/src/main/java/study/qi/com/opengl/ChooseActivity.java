@@ -19,14 +19,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import study.qi.com.opengl.renderer.Ball;
-import study.qi.com.opengl.renderer.ColorfulTriangle;
-import study.qi.com.opengl.renderer.Cone;
-import study.qi.com.opengl.renderer.Cube;
-import study.qi.com.opengl.renderer.Cylinder;
-import study.qi.com.opengl.renderer.Oval;
-import study.qi.com.opengl.renderer.Square;
-import study.qi.com.opengl.renderer.Triangle;
+import study.qi.com.opengl.renderer.shape.Ball;
+import study.qi.com.opengl.renderer.shape.ColorfulTriangle;
+import study.qi.com.opengl.renderer.shape.Cone;
+import study.qi.com.opengl.renderer.shape.Cube;
+import study.qi.com.opengl.renderer.shape.Cylinder;
+import study.qi.com.opengl.renderer.shape.Oval;
+import study.qi.com.opengl.renderer.shape.Square;
+import study.qi.com.opengl.renderer.shape.Triangle;
 
 
 /**

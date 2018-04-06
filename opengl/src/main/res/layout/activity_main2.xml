@@ -12,4 +12,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="形体"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/shape"
+        android:id="@+id/handle_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图片处理"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/handle_image"
+        android:id="@+id/camare_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="相机预览"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/camare_preview"
+        android:id="@+id/fbo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="fbo"/>
 </android.support.constraint.ConstraintLayout>

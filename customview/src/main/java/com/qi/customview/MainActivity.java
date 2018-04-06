@@ -12,8 +12,9 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.qi.customview.view.ChartViewItemRect;
-import com.qi.customview.view.HorizontalRecyclerView;
+
+import com.qi.customview.view.rect.ChartViewItemRect;
+import com.qi.customview.view.rect.HorizontalRecyclerView;
 
 import java.util.ArrayList;
 

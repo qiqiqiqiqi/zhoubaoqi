@@ -1,18 +1,18 @@
 package study.qi.com.opengl;
 
 import android.content.Intent;
-import android.opengl.GLSurfaceView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import study.qi.com.opengl.renderer.Triangle;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     private Button mShapeButton;
+    private Button mHandleImage;
+    private Button mCamarePreview;
+    private Button mFbo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         mShapeButton = findViewById(R.id.shape);
         mShapeButton.setOnClickListener(this);
+        mHandleImage = findViewById(R.id.handle_image);
+        mHandleImage.setOnClickListener(this);
+        mCamarePreview = findViewById(R.id.camare_preview);
+        mCamarePreview.setOnClickListener(this);
+        mFbo = findViewById(R.id.fbo);
+        mFbo.setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +51,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.shape:
                 intent = new Intent(this, ShapeActivity.class);
+                break;
+            case R.id.handle_image:
+                intent = new Intent(this, HandleImageActivity.class);
+                break;
+            case R.id.camare_preview:
+                intent = new Intent(this, CameraActivity.class);
+                break;
+            case R.id.fbo:
+                intent = new Intent(this, FBOActivity.class);
                 break;
         }
         startActivity(intent);

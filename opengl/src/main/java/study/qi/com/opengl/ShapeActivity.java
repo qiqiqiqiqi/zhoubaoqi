@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 
-import study.qi.com.opengl.renderer.CustomRender;
-import study.qi.com.opengl.renderer.Shape;
+import study.qi.com.opengl.renderer.shape.CustomRender;
+import study.qi.com.opengl.renderer.shape.Shape;
 
 
 public class ShapeActivity extends AppCompatActivity implements View.OnClickListener {
