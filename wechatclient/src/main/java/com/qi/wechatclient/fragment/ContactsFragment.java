@@ -2,12 +2,14 @@ package com.qi.wechatclient.fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +25,11 @@ import com.qi.wechatclient.dao.FriendDao;
 import com.qi.wechatclient.fragment.adapter.ContactsAdapter;
 import com.qi.wechatclient.utils.LogUtil;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.List;
+
+import cn.sharesdk.onekeyshare.OnekeyShare;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -124,7 +130,7 @@ public class ContactsFragment extends BaseFragment implements View.OnClickListen
         mContactsRecyclerview = (RecyclerView) view.findViewById(R.id.contacts_recyclerview);
         mTitleView = (TextView) view.findViewById(R.id.main_title);
         mAddView = (ImageView) view.findViewById(R.id.main_add);
-
+        mAddView.setOnClickListener(this);
         final GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2);
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
@@ -168,10 +174,31 @@ public class ContactsFragment extends BaseFragment implements View.OnClickListen
         mListener = null;
     }
 
+    private void showShare() {
+        OnekeyShare oks = new OnekeyShare();
+        //关闭sso授权
+        oks.disableSSOWhenAuthorize();
+
+        // title标题，微信、QQ和QQ空间等平台使用
+        oks.setTitle("demo");
+//        // titleUrl QQ和QQ空间跳转链接
+//        oks.setTitleUrl("http://sharesdk.cn");
+        // text是分享文本，所有平台都需要这个字段
+        oks.setText("我是分享文本");
+        // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
+        oks.setImagePath("/storage/emulated/0/fitforce/screenshot.png");//确保SDcard下面存在此张图片
+        // url在微信、微博，Facebook等平台中使用
+//        oks.setUrl("http://sharesdk.cn");
+//        // comment是我对这条分享的评论，仅在人人网使用
+//        oks.setComment("我是测试评论文本");
+        // 启动分享GUI
+        oks.show(getActivity());
+    }
+
 
     @Override
     public void onClick(View v) {
-
+        showShare();
     }
 
     @Override
@@ -181,4 +208,6 @@ public class ContactsFragment extends BaseFragment implements View.OnClickListen
         startActivity(intent);
 
     }
+
+
 }

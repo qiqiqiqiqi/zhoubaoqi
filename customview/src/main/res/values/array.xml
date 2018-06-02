@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string-array name="day_week_month_year">
+        <item>日</item>
+        <item>周</item>
+        <item>月</item>
+        <item>年</item>
+    </string-array>
+    <string-array name="flow_contents">
+        <item>身体形态</item>
+        <item>运动目标</item>
+        <item>疾病损伤</item>
+        <item>运动习惯</item>
+        <item>运动潜质</item>
+        <item>损伤风险</item>
+    </string-array>
+    <string-array name="flow_contents2">
+        <item>身体\n形态</item>
+        <item>运动\n目标</item>
+        <item>疾病\n损伤</item>
+        <item>运动\n习惯</item>
+        <item>运动\n潜质</item>
+        <item>损伤\n风险</item>
+    </string-array>
+</resources>

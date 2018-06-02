@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.protobuf'
 apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.mob.sdk'
 android {
     compileSdkVersion 25
     buildToolsVersion '26.0.2'
@@ -32,6 +33,27 @@ android {
             }
         }
     }
+}
+MobSDK {
+//    appKey "255f3a74b1e44"
+//    appSecret "01d34c5b8089a2f4a176495bfc7a899a"
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            Wechat {
+                appId "wxa727e482178b3572"
+                appSecret "03ae28467a8d7829f4815e49f74efb4f"
+                shareByAppClient true
+            }
+            WechatMoments {
+                appId "wxa727e482178b3572"
+                appSecret "03ae28467a8d7829f4815e49f74efb4f"
+                shareByAppClient true
+            }
+        }
+    }
+
 }
 greendao {
     schemaVersion 6// ： 数据库schema版本，也可以理解为数据库版本号

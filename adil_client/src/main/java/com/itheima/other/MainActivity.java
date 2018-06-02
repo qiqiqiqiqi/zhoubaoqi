@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onServiceConnected(ComponentName name, IBinder service) {
-//			binder = (IService)service; 无法进行直接强制类型转化，会抛出转化错误异常
+//binder = (IService)service; 无法进行直接强制类型转化，会抛出转化错误异常
 			binder = IService.Stub.asInterface(service);
 		}
 

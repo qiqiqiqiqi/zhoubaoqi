@@ -1,4 +1,4 @@
 include ':bezierdemo', ':customview', ':circularseekbar', ':amination', ':animationdemo',  ':tantan', ':wechatclient', ':algorithm', ':opengl'
-include ':adil_remote'
-include ':adil_client'
-include ':adil_pay'
+//include ':adil_remote'
+//include ':adil_client'
+//include ':adil_pay'

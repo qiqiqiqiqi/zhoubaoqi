@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/day"
@@ -45,6 +46,14 @@
             android:gravity="center"
             android:text="年"/>
     </LinearLayout>
+
+    <com.qi.customview.view.TouchBarView
+        android:id="@+id/touchbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"

@@ -11,12 +11,12 @@ import android.view.ViewGroup;
  * Created by feng on 2017/4/23.
  */
 
-public class CardLayoutManager extends RecyclerView.LayoutManager {
-    private static final String TAG = CardLayoutManager.class.getSimpleName();
+public class CardLayoutManager2 extends RecyclerView.LayoutManager {
+    private static final String TAG = CardLayoutManager2.class.getSimpleName();
     private RecyclerView mRecyclerView;
     private ItemTouchHelper mItemTouchHelper;
 
-    public CardLayoutManager(RecyclerView recyclerView, ItemTouchHelper itemTouchHelper) {
+    public CardLayoutManager2(RecyclerView recyclerView, ItemTouchHelper itemTouchHelper) {
         mRecyclerView = recyclerView;
         mItemTouchHelper = itemTouchHelper;
     }

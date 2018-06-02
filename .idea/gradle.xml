@@ -9,9 +9,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/adil_client" />
-            <option value="$PROJECT_DIR$/adil_pay" />
-            <option value="$PROJECT_DIR$/adil_remote" />
             <option value="$PROJECT_DIR$/algorithm" />
             <option value="$PROJECT_DIR$/amination" />
             <option value="$PROJECT_DIR$/animationdemo" />

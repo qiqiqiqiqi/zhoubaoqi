@@ -48,8 +48,12 @@ public class CardCallback extends ItemTouchHelper.Callback {
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
         viewHolder.itemView.setOnTouchListener(null);
         int adapterPosition = viewHolder.getAdapterPosition();
-        mDatas.remove(adapterPosition);
+        Integer remove = mDatas.remove(adapterPosition);
         mAdapter.notifyDataSetChanged();
+        // 卡片滑出后回调 OnSwipeListener 监听器
+        if (mOnSwipedListener != null) {
+            mOnSwipedListener.onSwiped(viewHolder, remove, direction == ItemTouchHelper.LEFT ? CardConfig.SWIPED_LEFT : CardConfig.SWIPED_RIGHT);
+        }
         if (mDatas != null && mDatas.isEmpty()) {
             if (mOnSwipedListener != null) {
                 mOnSwipedListener.onSwipedClear();
@@ -66,7 +70,7 @@ public class CardCallback extends ItemTouchHelper.Callback {
     public interface OnSwipedListener {
         void onSwipeing();
 
-        void onSwiped();
+        void onSwiped(RecyclerView.ViewHolder viewHolder, Integer integer, int direction);
 
         void onSwipedClear();
     }
@@ -86,6 +90,7 @@ public class CardCallback extends ItemTouchHelper.Callback {
             } else if (v < -1) {
                 v = -1;
             }
+            // 默认最大的旋转角度为 15 度
             float rotate = v * CardConfig.DEFAULT_ROTATE_DEGREE;
             recyclerViewForPosition.setRotation(rotate);
             int itemCount = recyclerView.getChildCount();//在cardlayoutmanager中通过addview添加了多少个view这里就是多少个

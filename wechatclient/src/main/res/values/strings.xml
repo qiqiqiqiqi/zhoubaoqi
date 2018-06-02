@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">wechatclient</string>
+    <string name="app_name">developTest</string>
 
     <string name="title_activity_launcher">LauncherActivity</string>
     <string name="dummy_button">Dummy Button</string>

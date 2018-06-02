@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/adil_client/adil_client.iml" filepath="$PROJECT_DIR$/adil_client/adil_client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/adil_pay/adil_pay.iml" filepath="$PROJECT_DIR$/adil_pay/adil_pay.iml" />
-      <module fileurl="file://$PROJECT_DIR$/adil_remote/adil_remote.iml" filepath="$PROJECT_DIR$/adil_remote/adil_remote.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithm/algorithm.iml" filepath="$PROJECT_DIR$/algorithm/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/amination/amination.iml" filepath="$PROJECT_DIR$/amination/amination.iml" />
       <module fileurl="file://$PROJECT_DIR$/animationdemo/animationdemo.iml" filepath="$PROJECT_DIR$/animationdemo/animationdemo.iml" />

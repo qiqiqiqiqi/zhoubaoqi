@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.qi.customview.view.TouchBarView;
 import com.qi.customview.view.cylinder.CylinderViewItem;
 import com.qi.customview.view.line.LineChartRecyclerView;
 import com.qi.customview.view.line.LineChartViewItem;
@@ -15,10 +16,11 @@ import com.qi.customview.view.point.PointChartRecyclerView;
 
 import java.util.ArrayList;
 
-public class PointActivity extends Activity implements PointChartRecyclerView.OnItemSelectedListener, View.OnClickListener {
+public class PointActivity extends Activity implements PointChartRecyclerView.OnItemSelectedListener, View.OnClickListener, TouchBarView.OnItemCheckListener {
 
     private ArrayList<Integer> mDatas;
     private PointChartRecyclerView mMHorizontalRecyclerView;
+    private TouchBarView mTouchBarView;
 
 
     @Override
@@ -30,6 +32,9 @@ public class PointActivity extends Activity implements PointChartRecyclerView.On
 
 
     private void initView() {
+        mTouchBarView = (TouchBarView) findViewById(R.id.touchbar);
+        mTouchBarView.setSelectedIndex(1);
+        mTouchBarView.setOnItemCheckListener(this);
         mMHorizontalRecyclerView = (PointChartRecyclerView) findViewById(R.id.recyclerView);
         LinearLayout scaleContainer = (LinearLayout) findViewById(R.id.scale_container);
         mMHorizontalRecyclerView.bindScaleView(scaleContainer);
@@ -78,5 +83,28 @@ public class PointActivity extends Activity implements PointChartRecyclerView.On
                 break;
         }
 
+    }
+
+    @Override
+    public void onItemCheck(int mode) {
+        switch (mode) {
+            case TouchBarView.MODE_DAY:
+                mMHorizontalRecyclerView.setDatas(0, 47);
+                mMHorizontalRecyclerView.setMode(CylinderViewItem.MODE_DAY);
+                break;
+
+            case TouchBarView.MODE_WEEK:
+                mMHorizontalRecyclerView.setDatas(0, 13);
+                mMHorizontalRecyclerView.setMode(CylinderViewItem.MODE_WEEK);
+                break;
+            case TouchBarView.MODE_MONTH:
+                mMHorizontalRecyclerView.setDatas(0, 61);
+                mMHorizontalRecyclerView.setMode(CylinderViewItem.MODE_MONTH);
+                break;
+            case TouchBarView.MODE_YEAR:
+                mMHorizontalRecyclerView.setDatas(0, 23);
+                mMHorizontalRecyclerView.setMode(CylinderViewItem.MODE_YEAR);
+                break;
+        }
     }
 }
