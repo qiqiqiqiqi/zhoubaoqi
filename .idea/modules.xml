@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/algorithm/algorithm.iml" filepath="$PROJECT_DIR$/algorithm/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/amination/amination.iml" filepath="$PROJECT_DIR$/amination/amination.iml" />
       <module fileurl="file://$PROJECT_DIR$/animationdemo/animationdemo.iml" filepath="$PROJECT_DIR$/animationdemo/animationdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/behavior/behavior.iml" filepath="$PROJECT_DIR$/behavior/behavior.iml" />
       <module fileurl="file://$PROJECT_DIR$/bezierdemo/bezierdemo.iml" filepath="$PROJECT_DIR$/bezierdemo/bezierdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/circularseekbar/circularseekbar.iml" filepath="$PROJECT_DIR$/circularseekbar/circularseekbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/customview/customview.iml" filepath="$PROJECT_DIR$/customview/customview.iml" />

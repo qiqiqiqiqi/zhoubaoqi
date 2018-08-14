@@ -28,7 +28,7 @@ public class CardCallback extends ItemTouchHelper.Callback {
         int dragFlags = 0;
         int swipeFlags = 0;
         RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
-        if (layoutManager instanceof CardLayoutManager) {
+        if (layoutManager instanceof CardLayoutManager || layoutManager instanceof CardLayoutManager2) {
             swipeFlags = ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
         }
         return makeMovementFlags(dragFlags, swipeFlags);
@@ -82,6 +82,7 @@ public class CardCallback extends ItemTouchHelper.Callback {
     @Override
     public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
         super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+
         View recyclerViewForPosition = viewHolder.itemView;
         if (actionState == ItemTouchHelper.ACTION_STATE_SWIPE) {
             float v = dX / getThreshold(recyclerView, viewHolder);
