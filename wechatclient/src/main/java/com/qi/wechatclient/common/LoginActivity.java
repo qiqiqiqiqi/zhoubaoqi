@@ -29,7 +29,7 @@ import com.qi.wechatclient.utils.ToastUtil;
 import com.qi.wechatclient.view.DialogFragmentProgresss;
 import com.qi.wechatclient.view.EditTextWithCompound;
 
-import cn.sharesdk.onekeyshare.OnekeyShare;
+
 
 
 public class LoginActivity extends Activity implements View.OnClickListener {
