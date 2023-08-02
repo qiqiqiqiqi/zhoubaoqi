@@ -1,8 +1,8 @@
 package com.qi.wechatclient.chat.ui.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
+import androidx.annotation.Nullable;
+import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +14,6 @@ import com.qi.wechatclient.R;
 import com.qi.wechatclient.chat.adapter.EmotionGridViewAdapter;
 import com.qi.wechatclient.chat.adapter.EmotionPagerAdapter;
 import com.qi.wechatclient.chat.base.BaseFragment;
-import com.qi.wechatclient.chat.base.MyApplication;
 import com.qi.wechatclient.chat.util.EmotionUtils;
 import com.qi.wechatclient.chat.util.GlobalOnItemClickManagerUtils;
 import com.qi.wechatclient.chat.util.Utils;

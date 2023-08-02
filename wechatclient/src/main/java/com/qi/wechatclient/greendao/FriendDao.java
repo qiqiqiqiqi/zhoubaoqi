@@ -113,7 +113,7 @@ public class FriendDao extends AbstractDao<Friend, Void> {
     @Override
     public Friend readEntity(Cursor cursor, int offset) {
         Friend entity = new Friend( //
-            cursor.isNull(offset + 0) ? null : cursor.getString(offset + 0), // userID
+            cursor.isNull(offset) ? null : cursor.getString(offset), // userID
             cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // friendID
             cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // friendName
             cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3) // headPath
@@ -123,7 +123,7 @@ public class FriendDao extends AbstractDao<Friend, Void> {
      
     @Override
     public void readEntity(Cursor cursor, Friend entity, int offset) {
-        entity.setUserID(cursor.isNull(offset + 0) ? null : cursor.getString(offset + 0));
+        entity.setUserID(cursor.isNull(offset) ? null : cursor.getString(offset));
         entity.setFriendID(cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1));
         entity.setFriendName(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
         entity.setHeadPath(cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3));

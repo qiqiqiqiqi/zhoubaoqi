@@ -3,7 +3,7 @@ package com.qi.wechatclient.common;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
+import androidx.fragment.app.FragmentTransaction;
 import android.widget.FrameLayout;
 
 

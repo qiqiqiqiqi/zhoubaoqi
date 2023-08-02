@@ -1,7 +1,7 @@
 package com.qi.wechatclient.chat.adapter;
 
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class EmotionPagerAdapter extends PagerAdapter {
 
-	private List<GridView> gvs;
+	private final List<GridView> gvs;
 
 	public EmotionPagerAdapter(List<GridView> gvs) {
 		this.gvs = gvs;

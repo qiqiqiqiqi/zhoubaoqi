@@ -1,7 +1,7 @@
 package com.qi.wechatclient.fragment.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.qi.wechatclient.R;
 import com.qi.wechatclient.bo.Friend;
-import com.qi.wechatclient.cache.UserCache;
 import com.qi.wechatclient.chat.enity.MessageInfo;
 import com.qi.wechatclient.dao.FriendDao;
 import com.qi.wechatclient.utils.DisplayUtils;
@@ -24,9 +23,9 @@ import java.util.List;
  */
 
 public class MessageAdapter extends RecyclerView.Adapter {
-    private Context mContext;
+    private final Context mContext;
     private List<MessageInfo> mMessageInfoList;
-    private View.OnClickListener mOnClickListener;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener mOnItemClickListener;
 
     public MessageAdapter(Context context, List<MessageInfo> messageInfos, View.OnClickListener onClickListener) {
@@ -49,7 +48,7 @@ public class MessageAdapter extends RecyclerView.Adapter {
             View view = LayoutInflater.from(mContext).inflate(R.layout.item_message_top, null);
             MessageTopViewHolder messageTopViewHolder = new MessageTopViewHolder(view);
             RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) messageTopViewHolder.top_container.getLayoutParams();
-            layoutParams.height = DisplayUtils.getScreenHeight(mContext) * 1 / 2;
+            layoutParams.height = DisplayUtils.getScreenHeight(mContext) / 2;
             messageTopViewHolder.top_container.setLayoutParams(layoutParams);
             return messageTopViewHolder;
         }
@@ -92,10 +91,10 @@ public class MessageAdapter extends RecyclerView.Adapter {
     }
 
     class MessageViewHolder extends RecyclerView.ViewHolder {
-        private ImageView friendHead;
-        private TextView friendName;
-        private TextView friendCurrentMessage;
-        private LinearLayout messageContainer;
+        private final ImageView friendHead;
+        private final TextView friendName;
+        private final TextView friendCurrentMessage;
+        private final LinearLayout messageContainer;
 
         public MessageViewHolder(View itemView) {
             super(itemView);
@@ -107,7 +106,7 @@ public class MessageAdapter extends RecyclerView.Adapter {
     }
 
     class MessageTopViewHolder extends RecyclerView.ViewHolder {
-        private LinearLayout top_container;
+        private final LinearLayout top_container;
 
         public MessageTopViewHolder(View itemView) {
             super(itemView);

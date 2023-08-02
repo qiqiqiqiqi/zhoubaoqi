@@ -1,7 +1,7 @@
 package com.qi.wechatclient.fragment.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,9 +21,9 @@ import java.util.List;
  */
 
 public class ContactsAdapter extends RecyclerView.Adapter {
-    private Context mContext;
-    private List<Friend> mFriends;
-    private View.OnClickListener mOnClickListener;
+    private final Context mContext;
+    private final List<Friend> mFriends;
+    private final View.OnClickListener mOnClickListener;
     private OnItemClickListener mOnItemClickListener;
 
     public ContactsAdapter(Context context, List<Friend> friends, View.OnClickListener onClickListener) {
@@ -42,7 +42,7 @@ public class ContactsAdapter extends RecyclerView.Adapter {
             View view = LayoutInflater.from(mContext).inflate(R.layout.item_contacts_top, null);
             MessageTopViewHolder messageTopViewHolder = new MessageTopViewHolder(view);
             RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) messageTopViewHolder.top_container.getLayoutParams();
-            layoutParams.height = DisplayUtils.getScreenHeight(mContext) * 1 / 2;
+            layoutParams.height = DisplayUtils.getScreenHeight(mContext) / 2;
             messageTopViewHolder.top_container.setLayoutParams(layoutParams);
             return messageTopViewHolder;
         }
@@ -83,9 +83,9 @@ public class ContactsAdapter extends RecyclerView.Adapter {
     }
 
     class MessageViewHolder extends RecyclerView.ViewHolder {
-        private ImageView friendHead;
-        private TextView friendNick;
-        private LinearLayout itemContainer;
+        private final ImageView friendHead;
+        private final TextView friendNick;
+        private final LinearLayout itemContainer;
 
         public MessageViewHolder(View itemView) {
             super(itemView);
@@ -96,7 +96,7 @@ public class ContactsAdapter extends RecyclerView.Adapter {
     }
 
     class MessageTopViewHolder extends RecyclerView.ViewHolder {
-        private LinearLayout top_container;
+        private final LinearLayout top_container;
 
         public MessageTopViewHolder(View itemView) {
             super(itemView);

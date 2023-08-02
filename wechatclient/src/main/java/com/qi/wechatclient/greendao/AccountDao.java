@@ -101,7 +101,7 @@ public class AccountDao extends AbstractDao<Account, Void> {
     @Override
     public Account readEntity(Cursor cursor, int offset) {
         Account entity = new Account( //
-            cursor.isNull(offset + 0) ? null : cursor.getString(offset + 0), // userID
+            cursor.isNull(offset) ? null : cursor.getString(offset), // userID
             cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // userName
             cursor.isNull(offset + 2) ? null : cursor.getLong(offset + 2) // creatTime
         );
@@ -110,7 +110,7 @@ public class AccountDao extends AbstractDao<Account, Void> {
      
     @Override
     public void readEntity(Cursor cursor, Account entity, int offset) {
-        entity.setUserID(cursor.isNull(offset + 0) ? null : cursor.getString(offset + 0));
+        entity.setUserID(cursor.isNull(offset) ? null : cursor.getString(offset));
         entity.setUserName(cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1));
         entity.setCreatTime(cursor.isNull(offset + 2) ? null : cursor.getLong(offset + 2));
      }

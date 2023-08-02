@@ -5,10 +5,10 @@ import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -35,7 +35,6 @@ import com.qi.wechatclient.chat.widget.StateButton;
 import com.qi.wechatclient.common.BaseActivity;
 import com.qi.wechatclient.dao.MessageInfoDao;
 import com.qi.wechatclient.data.ErrorCode;
-import com.qi.wechatclient.model.Event.ReceiveMessageEvent;
 import com.qi.wechatclient.model.request.SendMessageRequest;
 import com.qi.wechatclient.pushReport.MessagePushReport.MessagePushReport;
 import com.qi.wechatclient.pushReport.MessagePushReport.MessagePushReportListener;
@@ -201,7 +200,7 @@ public class ChatActivity extends BaseActivity implements EmotionInputDetector.O
     /**
      * item点击事件
      */
-    private ChatAdapter.onItemClickListener itemClickListener = new ChatAdapter.onItemClickListener() {
+    private final ChatAdapter.onItemClickListener itemClickListener = new ChatAdapter.onItemClickListener() {
         @Override
         public void onHeaderClick(int position) {
             Toast.makeText(ChatActivity.this, "onHeaderClick", Toast.LENGTH_SHORT).show();
@@ -209,7 +208,7 @@ public class ChatActivity extends BaseActivity implements EmotionInputDetector.O
 
         @Override
         public void onImageClick(View view, int position) {
-            int location[] = new int[2];
+            int[] location = new int[2];
             view.getLocationOnScreen(location);
             FullImageInfo fullImageInfo = new FullImageInfo();
             fullImageInfo.setLocationX(location[0]);

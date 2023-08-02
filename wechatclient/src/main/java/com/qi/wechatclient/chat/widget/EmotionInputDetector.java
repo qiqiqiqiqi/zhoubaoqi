@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Rect;
 import android.os.Build;
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
@@ -295,10 +295,7 @@ public class EmotionInputDetector {
             return true;
         }
         // 超过按钮的高度
-        if (y < -50 || y > mVoiceText.getHeight() + 50) {
-            return true;
-        }
-        return false;
+        return y < -50 || y > mVoiceText.getHeight() + 50;
     }
 
     public EmotionInputDetector setEmotionView(View emotionView) {

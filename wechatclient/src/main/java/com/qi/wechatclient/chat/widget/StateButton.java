@@ -6,10 +6,10 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
-import android.support.annotation.ColorInt;
-import android.support.annotation.FloatRange;
-import android.support.annotation.IntRange;
-import android.support.v7.widget.AppCompatButton;
+import androidx.annotation.ColorInt;
+import androidx.annotation.FloatRange;
+import androidx.annotation.IntRange;
+import androidx.appcompat.widget.AppCompatButton;
 import android.util.AttributeSet;
 
 import com.qi.wechatclient.R;
@@ -63,7 +63,7 @@ public class StateButton extends AppCompatButton {
     }
 
     public StateButton(Context context, AttributeSet attrs) {
-        this(context, attrs, android.support.v7.appcompat.R.attr.buttonStyle);
+        this(context, attrs, R.attr.buttonStyle);
     }
 
     public StateButton(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -119,7 +119,7 @@ public class StateButton extends AppCompatButton {
 
         //set radius
         mRadius = a.getDimensionPixelSize(R.styleable.StateButton_radius, 0);
-        mRound = a.getBoolean(R.styleable.StateButton_round, false);
+        mRound = a.getBoolean(R.styleable.StateButton_round2, false);
         mNormalBackground.setCornerRadius(mRadius);
         mPressedBackground.setCornerRadius(mRadius);
         mUnableBackground.setCornerRadius(mRadius);

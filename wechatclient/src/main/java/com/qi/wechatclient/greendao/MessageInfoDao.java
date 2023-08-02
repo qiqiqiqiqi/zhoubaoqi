@@ -191,13 +191,13 @@ public class MessageInfoDao extends AbstractDao<MessageInfo, Long> {
 
     @Override
     public Long readKey(Cursor cursor, int offset) {
-        return cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0);
+        return cursor.isNull(offset) ? null : cursor.getLong(offset);
     }    
 
     @Override
     public MessageInfo readEntity(Cursor cursor, int offset) {
         MessageInfo entity = new MessageInfo( //
-            cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // id
+            cursor.isNull(offset) ? null : cursor.getLong(offset), // id
             cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // userID
             cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // friendID
             cursor.getInt(offset + 3), // type
@@ -216,7 +216,7 @@ public class MessageInfoDao extends AbstractDao<MessageInfo, Long> {
      
     @Override
     public void readEntity(Cursor cursor, MessageInfo entity, int offset) {
-        entity.setId(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
+        entity.setId(cursor.isNull(offset) ? null : cursor.getLong(offset));
         entity.setUserID(cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1));
         entity.setFriendID(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
         entity.setType(cursor.getInt(offset + 3));
